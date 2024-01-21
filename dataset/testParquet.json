@@ -1,0 +1,19 @@
+{
+	"name": "testParquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "adslv2linkedservice",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "streamingoutput"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
