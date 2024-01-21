@@ -1,0 +1,37 @@
+{
+	"name": "dedicatedsqlpool",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sqldb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "UUID",
+				"type": "varchar"
+			},
+			{
+				"name": "DATE",
+				"type": "date"
+			},
+			{
+				"name": "FirstName",
+				"type": "varchar"
+			},
+			{
+				"name": "LastName",
+				"type": "varchar"
+			},
+			{
+				"name": "Email",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Users"
+		}
+	}
+}
