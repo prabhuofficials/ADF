@@ -7,9 +7,17 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "ADF-SampleFactory"
 		},
+		"AzureSqlDatabase1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'"
+		},
 		"adslv2linkedservice_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'adslv2linkedservice'"
+		},
+		"sqldb_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'sqldb'"
 		},
 		"adslv2linkedservice_properties_typeProperties_url": {
 			"type": "string",
@@ -42,8 +50,14 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"AzureSqlDatabase1_connectionString": {
+						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
+					},
 					"adslv2linkedservice_accountKey": {
 						"value": "[parameters('adslv2linkedservice_accountKey')]"
+					},
+					"sqldb_connectionString": {
+						"value": "[parameters('sqldb_connectionString')]"
 					},
 					"adslv2linkedservice_properties_typeProperties_url": {
 						"value": "[parameters('adslv2linkedservice_properties_typeProperties_url')]"

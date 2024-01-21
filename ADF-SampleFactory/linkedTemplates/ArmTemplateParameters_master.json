@@ -5,7 +5,13 @@
 		"factoryName": {
 			"value": "ADF-SampleFactory"
 		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
 		"adslv2linkedservice_accountKey": {
+			"value": ""
+		},
+		"sqldb_connectionString": {
 			"value": ""
 		},
 		"adslv2linkedservice_properties_typeProperties_url": {
