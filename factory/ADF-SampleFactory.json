@@ -1,0 +1,9 @@
+{
+	"name": "ADF-SampleFactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c04b1afd-0126-4ca1-97a4-307e6e2c28ab",
+		"tenantId": "bc86bdd2-3866-4542-8fcd-4c49c6a4974f"
+	}
+}
