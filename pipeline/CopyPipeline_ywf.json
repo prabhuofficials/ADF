@@ -148,8 +148,28 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Append variable1",
+				"type": "AppendVariable",
+				"dependsOn": [],
+				"userProperties": [
+					{
+						"name": "samplename",
+						"value": "samplevalue"
+					}
+				],
+				"typeProperties": {
+					"variableName": "varStartTime",
+					"value": "10"
+				}
 			}
 		],
+		"variables": {
+			"varStartTime": {
+				"type": "Array"
+			}
+		},
 		"annotations": []
 	}
 }
