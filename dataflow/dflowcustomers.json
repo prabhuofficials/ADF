@@ -12,10 +12,21 @@
 					"name": "CustomerJsonsource"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "csvCustomersNew",
+						"type": "DatasetReference"
+					},
+					"name": "sinkData"
+				}
+			],
 			"transformations": [
 				{
 					"name": "selectcols"
+				},
+				{
+					"name": "skCustomers"
 				}
 			],
 			"scriptLines": [
@@ -32,7 +43,17 @@
 				"     documentForm: 'documentPerLine',",
 				"     wildcardPaths:['*.json']) ~> CustomerJsonsource",
 				"CustomerJsonsource select(skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> selectcols"
+				"     skipDuplicateMapOutputs: true) ~> selectcols",
+				"selectcols keyGenerate(output(id as long),",
+				"     startAt: 1L,",
+				"     stepValue: 1L) ~> skCustomers",
+				"skCustomers sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sinkData"
 			]
 		}
 	}
