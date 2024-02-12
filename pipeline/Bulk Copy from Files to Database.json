@@ -66,8 +66,7 @@
 									"type": "DelimitedTextSource",
 									"storeSettings": {
 										"type": "AzureBlobFSReadSettings",
-										"recursive": true,
-										"wildcardFileName": "customerdata*.csv"
+										"fileListPath": "customerorders"
 									},
 									"formatSettings": {
 										"type": "DelimitedTextReadSettings"
