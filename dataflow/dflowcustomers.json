@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "CustomerJson",
+						"referenceName": "CusJson",
 						"type": "DatasetReference"
 					},
 					"name": "CustomerJsonsource"
@@ -39,9 +39,9 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
+				"     limit: 100,",
 				"     ignoreNoFilesFound: false,",
-				"     documentForm: 'documentPerLine',",
-				"     wildcardPaths:['*.json']) ~> CustomerJsonsource",
+				"     documentForm: 'documentPerLine') ~> CustomerJsonsource",
 				"CustomerJsonsource select(skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> selectcols",
 				"selectcols keyGenerate(output(id as long),",

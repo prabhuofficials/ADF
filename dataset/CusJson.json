@@ -1,0 +1,37 @@
+{
+	"name": "CusJson",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "customersdata",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "customersjson"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"$id": {
+					"type": "string"
+				},
+				"$firstname": {
+					"type": "string"
+				},
+				"$lastname": {
+					"type": "string"
+				},
+				"$email": {
+					"type": "string"
+				},
+				"$gender": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
