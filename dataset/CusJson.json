@@ -16,19 +16,19 @@
 		"schema": {
 			"type": "object",
 			"properties": {
-				"$id": {
+				"id": {
 					"type": "string"
 				},
-				"$firstname": {
+				"firstname": {
 					"type": "string"
 				},
-				"$lastname": {
+				"lastname": {
 					"type": "string"
 				},
-				"$email": {
+				"email": {
 					"type": "string"
 				},
-				"$gender": {
+				"gender": {
 					"type": "string"
 				}
 			}
