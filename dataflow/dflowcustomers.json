@@ -45,7 +45,7 @@
 				"     wildcardPaths:['*.json']) ~> CustomerJsonsource",
 				"CustomerJsonsource select(skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> selectcols",
-				"selectcols keyGenerate(output(id as long),",
+				"selectcols keyGenerate(output(skid as long),",
 				"     startAt: 1L,",
 				"     stepValue: 1L) ~> skCustomers",
 				"skCustomers sink(allowSchemaDrift: true,",
