@@ -1,0 +1,9 @@
+{
+	"name": "AldiadfCustomerOrdersProcessor",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c98c9807-4364-4a95-bd60-95744a811928",
+		"tenantId": "0293bbf7-2d37-46c3-8694-940bce9a2fa2"
+	}
+}
