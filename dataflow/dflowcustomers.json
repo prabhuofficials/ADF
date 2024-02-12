@@ -1,0 +1,39 @@
+{
+	"name": "dflowcustomers",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "CustomerJson",
+						"type": "DatasetReference"
+					},
+					"name": "CustomerJsonsource"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "selectcols"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          {$id} as string,",
+				"          {$firstname} as string,",
+				"          {$lastname} as string,",
+				"          {$email} as string,",
+				"          {$gender} as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     documentForm: 'documentPerLine',",
+				"     wildcardPaths:['*.json']) ~> CustomerJsonsource",
+				"CustomerJsonsource select(skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> selectcols"
+			]
+		}
+	}
+}
