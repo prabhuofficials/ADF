@@ -181,6 +181,26 @@
 						}
 					]
 				}
+			},
+			{
+				"name": "Fail_GetFilesActivity",
+				"type": "Fail",
+				"dependsOn": [
+					{
+						"activity": "Get Files",
+						"dependencyConditions": [
+							"Failed"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"message": {
+						"value": "@activity('Get Files').output.childItems located in pipeline().parameters.SourceContainer having issue in Get Files activity",
+						"type": "Expression"
+					},
+					"errorCode": "301"
+				}
 			}
 		],
 		"parameters": {
