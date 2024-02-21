@@ -27,12 +27,7 @@
 				}
 			],
 			"scriptLines": [
-				"source(output(",
-				"          movieId as string,",
-				"          title as string,",
-				"          genres as string",
-				"     ),",
-				"     allowSchemaDrift: true,",
+				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> Movies",
 				"Movies derive(year = toInteger(trim(right(title, 6), '()')),",
