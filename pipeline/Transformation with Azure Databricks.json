@@ -14,7 +14,7 @@
 						"referenceName": "SourceAvailabilityDataset",
 						"type": "DatasetReference"
 					},
-					"timeout": "7.00:00:00",
+					"timeout": "0.00:00:20",
 					"sleep": 10
 				}
 			},
@@ -98,7 +98,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "Shared/Transformations",
+					"notebookPath": "/Users/pachuthan.84@gmail.com/Untitled Notebook 2024-02-22 17:38:31",
 					"baseParameters": {
 						"input": {
 							"value": "@pipeline().parameters.inputPath",
