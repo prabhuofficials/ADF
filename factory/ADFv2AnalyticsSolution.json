@@ -1,0 +1,9 @@
+{
+	"name": "ADFv2AnalyticsSolution",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "948f5f0d-5f3c-4ef9-b368-3f1e72f403e2",
+		"tenantId": "ce9d39c3-0346-420e-859c-fb601e46846f"
+	}
+}
